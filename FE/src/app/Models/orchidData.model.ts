@@ -2,8 +2,8 @@ export interface Orchid {
   id: number;
   type: string;
   species: string;
-  genus: string;
-  family: string;
+  genus_name: string;
+  family_name: string;
   price: number;
   discount: number;
   quantity: number;

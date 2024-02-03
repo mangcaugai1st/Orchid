@@ -3,14 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { CarouselComponent } from './components/carousel/carousel.component';
-import { HomeComponent } from './components/home/home.component';
+import { HeaderComponent } from './components/End_user/header/header.component';
+import { FooterComponent } from './components/End_user/footer/footer.component';
+import { CarouselComponent } from './components/End_user/carousel/carousel.component';
+import { HomeComponent } from './components/End_user/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import {HttpClientModule} from "@angular/common/http";
-import { GenusComponent } from './components/genus/genus.component';
-import { SpeciesComponent } from './components/genus/species/species.component';
+import { GenusComponent } from './components/End_user/genus/genus.component';
+import { SpeciesComponent } from './components/End_user/genus/species/species.component';
+import { SpeciesSpecificComponent } from './components/End_user/genus/species/species-specific/species-specific.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { SpeciesComponent } from './components/genus/species/species.component';
     HomeComponent,
     PageNotFoundComponent,
     GenusComponent,
-    SpeciesComponent
+    SpeciesComponent,
+    SpeciesSpecificComponent,
+    SignInComponent,
   ],
   imports: [
     BrowserModule,

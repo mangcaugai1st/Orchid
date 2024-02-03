@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import {SignInComponent} from "../../sign-in/sign-in.component";
 
 @Component({
   selector: 'app-header',
@@ -10,4 +11,6 @@ export class HeaderComponent {
   toggleNavbar() {
     this.showMenu = !this.showMenu;
   }
+
+    protected readonly SignInComponent = SignInComponent;
 }

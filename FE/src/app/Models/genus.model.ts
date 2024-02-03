@@ -1,6 +1,6 @@
 import { Orchid } from "./orchidData.model";
 export interface Genus {
-    genus: string;
+    genus_name: string;
     image: string;
     orchids: Orchid[];
 }
