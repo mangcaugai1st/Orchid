@@ -23,14 +23,14 @@ namespace BE.Migrations
 
             modelBuilder.Entity("BE.Data.Genus", b =>
                 {
-                    b.Property<string>("genus")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<string>("genus_name")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("image")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("genus");
+                    b.HasKey("genus_name");
 
                     b.ToTable("Genus");
                 });
@@ -44,52 +44,39 @@ namespace BE.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
 
                     b.Property<string>("description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<byte>("discount")
                         .HasColumnType("tinyint");
 
-                    b.Property<string>("family")
-                        .IsRequired()
+                    b.Property<string>("family_name")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("genus")
-                        .IsRequired()
-                        .HasMaxLength(100)
+                    b.Property<string>("genus_name")
                         .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("genus1")
-                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("image0")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("image1")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("image2")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("image3")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("image4")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("image5")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
@@ -100,17 +87,15 @@ namespace BE.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("species")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("type")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
 
-                    b.HasIndex("genus1");
+                    b.HasIndex("genus_name");
 
                     b.ToTable("Orchid");
                 });
@@ -119,7 +104,7 @@ namespace BE.Migrations
                 {
                     b.HasOne("BE.Data.Genus", "Genus")
                         .WithMany("Orchids")
-                        .HasForeignKey("genus1");
+                        .HasForeignKey("genus_name");
 
                     b.Navigation("Genus");
                 });

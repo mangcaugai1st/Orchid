@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BE.Data;
+using NuGet.Protocol;
 
 namespace BE.Controllers
 {
@@ -29,32 +30,47 @@ namespace BE.Controllers
               return NotFound();
           }
             return await _context.Orchids.ToListAsync();
+        } 
+        [HttpGet]
+        [Route("{genus_name}")]
+        public async Task<ActionResult<List<Orchid>>> GetOrchidByGenus(string genus_name)
+        {
+            var result = await _context.Orchids.Where(o => o.genus_name == genus_name)
+                .Include(o => o.Genus).Select(o => new 
+                {
+                    genus_name = o.genus_name,
+                    species = o.species,
+                    image0 = o.image0,
+                    price = o.price,
+                }).ToListAsync();
+            if (result == null || !result.Any())
+            {
+                return NotFound();
+            }
+            return Ok(result);
         }
 
-        // GET: api/Orchids/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Orchid>> GetOrchid(int id)
+        [HttpGet]
+        [Route("{genus_name}/{species}")]
+        public async Task<ActionResult<List<Orchid>>> GetOrchidInformation(string species)
         {
-          if (_context.Orchids == null)
-          {
-              return NotFound();
-          }
-            var orchid = await _context.Orchids.FindAsync(id);
-
-            if (orchid == null)
+            var result = await _context.Orchids.Where(o => o.species == species)
+                .Include(o => o.Genus).Select(o => new
+                {
+                    genus_name = o.genus_name,
+                    species = o.species,
+                    image0 = o.image0,
+                    price = o.price,
+                    description = o.description,
+                }).FirstOrDefaultAsync();
+            if (result == null)
             {
                 return NotFound();
             }
 
-            return orchid;
-        }
-        [HttpGet("[action]/{genus}")]
-        public async Task<ActionResult<List<Orchid>>> GetOrchidByGenus(string genus)
-        {
-            var result = await _context.Orchids.Where(o => o.genus == genus).ToListAsync();
-            if (result.Count == 0) return NotFound();
             return Ok(result);
         }
+
         // PUT: api/Orchids/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]

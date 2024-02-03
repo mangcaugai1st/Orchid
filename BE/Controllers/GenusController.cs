@@ -54,7 +54,7 @@ namespace BE.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutGenus(string id, Genus genus)
         {
-            if (id != genus.genus)
+            if (id != genus.genus_name)
             {
                 return BadRequest();
             }
@@ -96,7 +96,7 @@ namespace BE.Controllers
             }
             catch (DbUpdateException)
             {
-                if (GenusExists(genus.genus))
+                if (GenusExists(genus.genus_name))
                 {
                     return Conflict();
                 }
@@ -106,7 +106,7 @@ namespace BE.Controllers
                 }
             }
 
-            return CreatedAtAction("GetGenus", new { id = genus.genus }, genus);
+            return CreatedAtAction("GetGenus", new { id = genus.genus_name }, genus);
         }
 
         // DELETE: api/Genus/5
@@ -131,7 +131,7 @@ namespace BE.Controllers
 
         private bool GenusExists(string id)
         {
-            return (_context.Genera?.Any(e => e.genus == id)).GetValueOrDefault();
+            return (_context.Genera?.Any(e => e.genus_name == id)).GetValueOrDefault();
         }
     }
 }

@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BE.Migrations
 {
     [DbContext(typeof(OrchidStoreContext))]
-    [Migration("20240123050639_12345")]
-    partial class _12345
+    [Migration("20240130161401_Hello_World")]
+    partial class Hello_World
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,6 +23,20 @@ namespace BE.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("BE.Data.Genus", b =>
+                {
+                    b.Property<string>("genus_name")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("genus_name");
+
+                    b.ToTable("Genus");
+                });
+
             modelBuilder.Entity("BE.Data.Orchid", b =>
                 {
                     b.Property<int>("id")
@@ -32,49 +46,39 @@ namespace BE.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
 
                     b.Property<string>("description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<byte>("discount")
                         .HasColumnType("tinyint");
 
-                    b.Property<string>("family")
-                        .IsRequired()
+                    b.Property<string>("family_name")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("genus")
-                        .IsRequired()
-                        .HasMaxLength(100)
+                    b.Property<string>("genus_name")
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("image0")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("image1")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("image2")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("image3")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("image4")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("image5")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
@@ -85,17 +89,31 @@ namespace BE.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("species")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("type")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
 
+                    b.HasIndex("genus_name");
+
                     b.ToTable("Orchid");
+                });
+
+            modelBuilder.Entity("BE.Data.Orchid", b =>
+                {
+                    b.HasOne("BE.Data.Genus", "Genus")
+                        .WithMany("Orchids")
+                        .HasForeignKey("genus_name");
+
+                    b.Navigation("Genus");
+                });
+
+            modelBuilder.Entity("BE.Data.Genus", b =>
+                {
+                    b.Navigation("Orchids");
                 });
 #pragma warning restore 612, 618
         }

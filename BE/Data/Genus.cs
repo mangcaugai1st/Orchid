@@ -7,8 +7,10 @@ namespace BE.Data
     public class Genus
     {
         [Key]
-        public string genus { get; set; }
-        public string image { get; set; }
-        public ICollection<Orchid> Orchids { get; set; }
+        [MaxLength(100)]
+        public string? genus_name { get; set; }
+        public string? image { get; set; }
+
+        public ICollection<Orchid> Orchids { get; }
     }
 }
