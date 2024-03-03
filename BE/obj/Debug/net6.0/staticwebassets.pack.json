@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Orchid\\BE\\wwwroot\\images\\60487693b405f2bc68caef206c307722.jpg",
+      "PackagePath": "staticwebassets\\images\\60487693b405f2bc68caef206c307722.jpg"
+    },
+    {
+      "Id": "D:\\Orchid\\BE\\wwwroot\\images\\Dendrobium_Vietnamense.jfif",
+      "PackagePath": "staticwebassets\\images\\Dendrobium_Vietnamense.jfif"
+    },
+    {
+      "Id": "D:\\Orchid\\BE\\wwwroot\\images\\Paphiopedilum_Concolor.jpg",
+      "PackagePath": "staticwebassets\\images\\Paphiopedilum_Concolor.jpg"
+    },
+    {
+      "Id": "D:\\Orchid\\BE\\wwwroot\\images\\R.jfif",
+      "PackagePath": "staticwebassets\\images\\R.jfif"
+    },
+    {
+      "Id": "D:\\Orchid\\BE\\wwwroot\\images\\cluedcoerb__33255.jpg",
+      "PackagePath": "staticwebassets\\images\\cluedcoerb__33255.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.BE.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.BE.props",
+      "PackagePath": "build\\BE.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.BE.props",
+      "PackagePath": "buildMultiTargeting\\BE.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.BE.props",
+      "PackagePath": "buildTransitive\\BE.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

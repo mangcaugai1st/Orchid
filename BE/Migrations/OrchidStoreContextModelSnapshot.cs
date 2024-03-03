@@ -100,6 +100,32 @@ namespace BE.Migrations
                     b.ToTable("Orchid");
                 });
 
+            modelBuilder.Entity("BE.Data.User", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
+
+                    b.Property<string>("password")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("username")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("id");
+
+                    b.ToTable("User");
+                });
+
             modelBuilder.Entity("BE.Data.Orchid", b =>
                 {
                     b.HasOne("BE.Data.Genus", "Genus")

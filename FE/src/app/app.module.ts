@@ -13,6 +13,10 @@ import { GenusComponent } from './components/End_user/genus/genus.component';
 import { SpeciesComponent } from './components/End_user/genus/species/species.component';
 import { SpeciesSpecificComponent } from './components/End_user/genus/species/species-specific/species-specific.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
+import { ContactComponent } from './components/End_user/contact/contact.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import {FormsModule} from "@angular/forms";
+import { OverviewComponent } from './components/Admin/overview/overview.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +30,15 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
     SpeciesComponent,
     SpeciesSpecificComponent,
     SignInComponent,
+    ContactComponent,
+    SignUpComponent,
+    OverviewComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

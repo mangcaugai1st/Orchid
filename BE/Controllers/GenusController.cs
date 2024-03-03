@@ -20,7 +20,7 @@ namespace BE.Controllers
             _context = context;
         }
 
-        // GET: api/Genus
+        // GET: api/Genus | lấy toàn bộ tên chi 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Genus>>> GetGenera()
         {
@@ -31,7 +31,7 @@ namespace BE.Controllers
             return await _context.Genera.ToListAsync();
         }
 
-        // GET: api/Genus/5
+        // GET: api/Genus/5 | lấy tên chi theo id
         [HttpGet("{id}")]
         public async Task<ActionResult<Genus>> GetGenus(string id)
         {

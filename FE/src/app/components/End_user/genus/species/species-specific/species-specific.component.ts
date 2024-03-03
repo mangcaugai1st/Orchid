@@ -4,8 +4,6 @@ import {environment} from "../../../../../../environments/environment.developmen
 import {HttpClient} from "@angular/common/http";
 import {Orchid} from "../../../../../Models/orchidData.model";
 import {Title} from "@angular/platform-browser";
-import {formatCurrency} from "@angular/common";
-
 
 @Component({
   selector: 'app-species-specific',
@@ -26,6 +24,7 @@ export class SpeciesSpecificComponent implements OnInit {
         }
     })
   }
+  genus_name = this.route.snapshot.params["species"];
   specific_species : Orchid;
-  protected readonly formatCurrency = formatCurrency;
+  species_name : string =this.route.snapshot.params["species"] + " " + this.route.snapshot.params["specific_species"];
 }

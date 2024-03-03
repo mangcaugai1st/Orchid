@@ -1,11 +1,105 @@
 {
   "Version": 1,
-  "Hash": "U3d12KmG4NMUZnW+lS7Cs/WSwfHNF1/j275gDdgpBXA=",
+  "Hash": "WPxVB1c0ybZb6xw2xChD1+ZINFya70hpYxVCEEZ5Pdk=",
   "Source": "BE",
   "BasePath": "_content/BE",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "BE\\wwwroot",
+      "Source": "BE",
+      "ContentRoot": "D:\\Orchid\\BE\\wwwroot\\",
+      "BasePath": "_content/BE",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Orchid\\BE\\wwwroot\\images\\60487693b405f2bc68caef206c307722.jpg",
+      "SourceId": "BE",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Orchid\\BE\\wwwroot\\",
+      "BasePath": "_content/BE",
+      "RelativePath": "images/60487693b405f2bc68caef206c307722.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\60487693b405f2bc68caef206c307722.jpg"
+    },
+    {
+      "Identity": "D:\\Orchid\\BE\\wwwroot\\images\\cluedcoerb__33255.jpg",
+      "SourceId": "BE",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Orchid\\BE\\wwwroot\\",
+      "BasePath": "_content/BE",
+      "RelativePath": "images/cluedcoerb__33255.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cluedcoerb__33255.jpg"
+    },
+    {
+      "Identity": "D:\\Orchid\\BE\\wwwroot\\images\\Dendrobium_Vietnamense.jfif",
+      "SourceId": "BE",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Orchid\\BE\\wwwroot\\",
+      "BasePath": "_content/BE",
+      "RelativePath": "images/Dendrobium_Vietnamense.jfif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Dendrobium_Vietnamense.jfif"
+    },
+    {
+      "Identity": "D:\\Orchid\\BE\\wwwroot\\images\\Paphiopedilum_Concolor.jpg",
+      "SourceId": "BE",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Orchid\\BE\\wwwroot\\",
+      "BasePath": "_content/BE",
+      "RelativePath": "images/Paphiopedilum_Concolor.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Paphiopedilum_Concolor.jpg"
+    },
+    {
+      "Identity": "D:\\Orchid\\BE\\wwwroot\\images\\R.jfif",
+      "SourceId": "BE",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Orchid\\BE\\wwwroot\\",
+      "BasePath": "_content/BE",
+      "RelativePath": "images/R.jfif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\R.jfif"
+    }
+  ]
 }

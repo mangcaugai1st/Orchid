@@ -12,6 +12,7 @@ namespace BE.Data
         #region DbSet 
         public DbSet<Orchid>? Orchids { get; set; }
         public DbSet<Genus> ? Genera { get; set; }
+        public DbSet<User> ? Users { get; set; } 
         #endregion
     }
 }

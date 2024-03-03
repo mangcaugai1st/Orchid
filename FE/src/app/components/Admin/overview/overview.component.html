@@ -1,0 +1,17 @@
+<table class="table-auto">
+    <thead>
+    <tr>
+        <th>Số thứ tự</th>
+        <th>Tên chi</th>
+        <th>Hình</th>
+        <th>Thao tác</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let i of genus; let ordinal_number = index">
+        <td>{{ordinal_number+1}}</td>
+        <td>{{i.genus_name}}</td>
+        <td>{{i.image}}</td>
+    </tr>
+    </tbody>
+</table>

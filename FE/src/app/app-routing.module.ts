@@ -5,18 +5,25 @@ import {GenusComponent} from "./components/End_user/genus/genus.component";
 import {SpeciesComponent} from "./components/End_user/genus/species/species.component";
 import {SpeciesSpecificComponent} from "./components/End_user/genus/species/species-specific/species-specific.component";
 
+import {SignUpComponent} from "./components/sign-up/sign-up.component";
 import {SignInComponent} from "./components/sign-in/sign-in.component";
+import {ContactComponent} from "./components/End_user/contact/contact.component";
+
 import {PageNotFoundComponent} from "./components/page-not-found/page-not-found.component";
+// Admin section
+import {OverviewComponent} from "./components/Admin/overview/overview.component";
 
 const routes: Routes = [
   {path: '', title: 'Home', component: HomeComponent},
   {path: 'Sign-in', title: 'Đăng nhập', component: SignInComponent},
+  {path: 'Sign-up', title: 'Đăng ký', component: SignUpComponent},
   {path: 'Genus', title: 'Chi', component: GenusComponent},
-  {path: 'Genus/:id', title: 'Species', component: SpeciesComponent},
+  {path: 'Genus/:id', component: SpeciesComponent},
   {path: 'Genus/:species/:specific_species', component: SpeciesSpecificComponent},
-  {path: '**', title: 'Error', component: PageNotFoundComponent, pathMatch: 'full'}
+  {path: 'Contact', component: ContactComponent},
+  {path: 'Admin/overview', title: 'Overview', component: OverviewComponent},
+  {path: '**', title: 'Error', component: PageNotFoundComponent, pathMatch: 'full'},
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
