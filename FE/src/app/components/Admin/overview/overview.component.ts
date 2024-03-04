@@ -9,6 +9,11 @@ import {environment} from "../../../../environments/environment";
   styleUrls: ['./overview.component.css']
 })
 export class OverviewComponent {
+  showModal = false;
+  toggleModal() {
+    this.showModal = !this.showModal;
+  }
+
   constructor(private http : HttpClient) {
 
   }

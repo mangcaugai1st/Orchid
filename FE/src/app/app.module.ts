@@ -17,6 +17,7 @@ import { ContactComponent } from './components/End_user/contact/contact.componen
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import {FormsModule} from "@angular/forms";
 import { OverviewComponent } from './components/Admin/overview/overview.component';
+import { SpeciesByGenusComponent } from './components/Admin/overview/species-by-genus/species-by-genus.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { OverviewComponent } from './components/Admin/overview/overview.componen
     ContactComponent,
     SignUpComponent,
     OverviewComponent,
+    SpeciesByGenusComponent,
   ],
   imports: [
     BrowserModule,

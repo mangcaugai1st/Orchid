@@ -12,6 +12,7 @@ import {ContactComponent} from "./components/End_user/contact/contact.component"
 import {PageNotFoundComponent} from "./components/page-not-found/page-not-found.component";
 // Admin section
 import {OverviewComponent} from "./components/Admin/overview/overview.component";
+import {SpeciesByGenusComponent} from "./components/Admin/overview/species-by-genus/species-by-genus.component";
 
 const routes: Routes = [
   {path: '', title: 'Home', component: HomeComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'Genus/:species/:specific_species', component: SpeciesSpecificComponent},
   {path: 'Contact', component: ContactComponent},
   {path: 'Admin/overview', title: 'Overview', component: OverviewComponent},
+  {path: 'Admin/overview/species-by-genus/:genus_name', component: SpeciesByGenusComponent},
   {path: '**', title: 'Error', component: PageNotFoundComponent, pathMatch: 'full'},
 ];
 @NgModule({
