@@ -18,6 +18,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import {FormsModule} from "@angular/forms";
 import { OverviewComponent } from './components/Admin/overview/overview.component';
 import { SpeciesByGenusComponent } from './components/Admin/overview/species-by-genus/species-by-genus.component';
+import { EditGenusComponent } from './components/Admin/overview/edit-genus/edit-genus.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { SpeciesByGenusComponent } from './components/Admin/overview/species-by-
     SignUpComponent,
     OverviewComponent,
     SpeciesByGenusComponent,
+    EditGenusComponent,
   ],
   imports: [
     BrowserModule,
