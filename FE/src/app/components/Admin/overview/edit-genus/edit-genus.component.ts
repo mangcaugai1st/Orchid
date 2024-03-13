@@ -4,7 +4,7 @@ import {Title} from "@angular/platform-browser";
 import {environment} from "../../../../../environments/environment";
 import {Genus} from "../../../../Models/genus.model";
 import {ActivatedRoute} from "@angular/router";
-
+import {NgOptimizedImage} from "@angular/common";
 @Component({
   selector: 'app-edit-genus',
   templateUrl: './edit-genus.component.html',

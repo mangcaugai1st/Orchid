@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Genus} from "../../../Models/genus.model";
 import {environment} from "../../../../environments/environment";
+import {AuthService} from "../../../auth.service";
 
 @Component({
   selector: 'app-overview',
@@ -14,7 +15,7 @@ export class OverviewComponent {
     this.showModal = !this.showModal;
   }
 
-  constructor(private http : HttpClient) {
+  constructor(private http : HttpClient, private authService: AuthService) {
 
   }
   ngOnInit() {
